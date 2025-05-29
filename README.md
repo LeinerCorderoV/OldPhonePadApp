@@ -1,4 +1,4 @@
-﻿# OldPhonePadApp
+﻿﻿# OldPhonePadApp
 
 **OldPhonePadApp** is a beginner-friendly .NET console application that simulates the old mobile-phone keypad.  
 Type sequences of digits (2–9) to enter letters, `0` for space, `*` to delete the last character, and end your message with `#`. The app converts your input into readable text.
@@ -48,28 +48,34 @@ Consecutive presses are grouped (e.g., `222` → `C`), and the final string is d
 ## Installation
 
 1. **Clone** this repository:
-   ```bash
+
    git clone https://github.com/LeinerCorderoV/OldPhonePadApp.git
+
    cd OldPhonePadApp
 
-2.Restore packages and build the solution:
 
-dotnet restore
-dotnet build 
+2. **Restore**  packages and build the solution:
+
+   dotnet restore
+   dotnet build 
+
 
 ## Usage
 
 1. **Run** the application:
 
-dotnet run --project OldPhonePadApp/OldPhonePadApp.csproj
+   dotnet run --project OldPhonePadApp/OldPhonePadApp.csproj
 
-You will see instructions like:
+
+**You will see instructions like:** 
 
 Keys: 2=ABC 3=DEF 4=GHI 5=JKL 6=MNO 7=PQRS 8=TUV 9=WXYZ 0=space  
 Use #: end, *: back, space: pause, q: quit
 
 1.Type your sequence (e.g., 23*3#).
+
 2.Press Enter to see the converted text.
+
 3.Repeat or type q + Enter to quit.
 
 Input> 234#
@@ -83,18 +89,21 @@ This project includes xUnit tests to verify that OldPhonePad works correctly in 
 cd OldPhonePadApp.Tests
 
 2.Run all tests:
+
 dotnet test
 
 You should see 12 passing tests, covering cases such as 2#, 55555#, *2#, #, and more.
 
 ## Project Structure
 
+```plaintext
 OldPhonePadApp/
 ├── OldPhonePadApp/           # Main console application
-│   └── Program.cs            # Contains Main loop and OldPhonePad method
+│   └── Program.cs            # Contains Main loop and OldPhonePad logic
 └── OldPhonePadApp.Tests/     # xUnit test project
     └── ProgramTests.cs       # Theory tests for OldPhonePad
 
+```
 
 ---
 
@@ -102,42 +111,36 @@ OldPhonePadApp/
 
 We welcome contributions to OldPhonePadApp! Please follow these steps:
 
-1. **Fork** the repository.  
+1. **Fork** the repository.
+
 2. **Clone** your fork and navigate into it:
-   ```bash
-   1. git clone https://github.com/LeinerCorderoV/OldPhonePadApp.git
-   2. cd OldPhonePadApp
 
-3. Create a new branch for your feature or fix:
-   ```bash
+   git clone https://github.com/LeinerCorderoV/OldPhonePadApp.git
+   cd OldPhonePadApp
+
+3. **Create** a new branch for your feature or fix:
+
    git checkout -b feature/your-feature-name
-   ```
-4.Implement your changes, following the existing coding style and conventions.
 
-5.Add or update tests in OldPhonePadApp.Tests to cover your changes.
+4. **Implement** your changes and update tests in `OldPhonePadApp.Tests`.
 
-6.Commit your work with a clear message:
+5. **Stage & commit** with a clear message:
 
-git commit -m "Add: brief description of your feature or fix"
+    git add . git commit -m "feat: brief description of your change"
 
-7.Push your branch to your fork:
+6. **Push** your branch:
 
-git push origin feature/your-feature-name
+    git push origin feature/your-feature-name
 
-8. Open a Pull Request against the main branch of this repository:
+7. **Open** a Pull Request against `main`, describing:
+   - The problem you’re solving  
+   - Related issue numbers  
+   - Screenshots or logs (if applicable)
 
-Describe the problem you’re solving.
-Reference any related issues.
-Include screenshots or logs if applicable.
-
-Before submitting your PR, please ensure:
-
-All tests pass (dotnet test).
-New code is properly documented.
-No unrelated changes are included.
+---
 
 ## License
 
-This project is licensed under the MIT License.
-See the LICENSE file for full details.
+This project is licensed under the MIT License.  
+See the `LICENSE` file for details.  
 © 2025 Leiner Cordero V.

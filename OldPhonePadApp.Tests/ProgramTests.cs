@@ -1,5 +1,5 @@
 ﻿using Xunit;
-using OldPhonePadApp;   // Nombre del namespace de tu app
+using OldPhonePadApp; 
 
 namespace OldPhonePadApp.Tests
 {
